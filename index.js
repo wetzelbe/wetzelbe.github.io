@@ -1,3 +1,3 @@
 window.addEventListener("deviceorientation", (event) => {
-    document.getElementById("show").innerText = event.toString()
+    document.getElementById("show").innerText = event.alpha
 })
