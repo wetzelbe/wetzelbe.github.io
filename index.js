@@ -7,10 +7,10 @@ if (typeof window.DeviceOrientationEvent.requestPermission === 'function') {
     window.DeviceOrientationEvent.requestPermission()
         .then(response => {
             if (response == 'granted') {
-                window.addEventListener('deviceorientation', handle)
+                window.addEventListener('deviceorientation', handle, {absolute: true})
             }
         })
         .catch(console.error)
 } else {
-    window.addEventListener("deviceorientation", handle)
+    window.addEventListener("deviceorientation", handle, {absolute: true})
 }
