@@ -1,5 +1,5 @@
 function handle(event) {
-    document.getElementById("show").innerText = event.alpha
+    document.getElementById("show").innerText = Math.round(event.alpha)
     console.log(event)
 }
 
