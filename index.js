@@ -1,5 +1,6 @@
 function handle(event) {
-
+    document.getElementById("show").innerText = event.alpha
+    console.log(event)
 }
 
 if (typeof DeviceMotionEvent.requestPermission === 'function') {
