@@ -3,8 +3,8 @@ function handle(event) {
     console.log(event)
 }
 
-if (typeof DeviceMotionEvent.requestPermission === 'function') {
-    DeviceOrientationEvent.requestPermission()
+if (typeof window.DeviceOrientationEvent.requestPermission === 'function') {
+    window.DeviceOrientationEvent.requestPermission()
         .then(response => {
             if (response == 'granted') {
                 window.addEventListener('deviceorientation', handle)
