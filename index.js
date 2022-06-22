@@ -12,5 +12,5 @@ if (typeof window.DeviceOrientationEvent.requestPermission === 'function') {
         })
         .catch(console.error)
 } else {
-    window.addEventListener("deviceorientationabsolute", handle)
+    window.addEventListener("deviceorientation", handle)
 }
