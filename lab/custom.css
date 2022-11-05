@@ -69,12 +69,12 @@
   }
 }
 
-.glitch1,
-.glitch2 {
+#glitch1,
+#glitch2 {
   position: absolute;
 }
 
-.glitch1{
+#glitch1{
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -92,7 +92,7 @@
   }
 }
 
-.glitch2{
+#glitch2{
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
