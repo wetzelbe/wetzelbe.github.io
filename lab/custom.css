@@ -13,9 +13,6 @@
   margin: 80px;
 }
 
-.scene-glitch {
-  animation: glitch 1s linear infinite;
-}
 
 .cube {
   height: 100%;
@@ -55,6 +52,10 @@
   transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateZ(100px);
 }
 
+
+.scene-glitch {
+  animation: glitch 1s linear infinite;
+}
 
 @keyframes glitch{
   2%,64%{
