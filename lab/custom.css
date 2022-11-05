@@ -15,9 +15,8 @@
   width: 100px;
   height: 100px;
   border: 1px solid white;
-  background-color: black;
+  background-color: rgba(0,0,0,0);
   position: absolute;
-  opacity: 0;
 }
 .cube-left {
   transform: rotateX(0deg);
