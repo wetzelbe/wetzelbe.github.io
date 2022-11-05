@@ -1,3 +1,11 @@
+@keyframes rotateAroundZAxis {
+  0% {transform: rotateZ(0deg)}
+  25% {transform: rotateZ(90deg)}
+  50% {transform: rotateZ(180deg)}
+  75% {transform: rotateZ(270deg)}
+  100% {transform: rotateZ(360deg)}
+}
+
 .scene {
   width: 200px;
   height: 200px;
@@ -9,6 +17,10 @@
   width: 100%;
   position: relative;
   transform-style: preserve-3d;
+  
+  animation-name: rotateAroundZAxis;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 .cube-face {
