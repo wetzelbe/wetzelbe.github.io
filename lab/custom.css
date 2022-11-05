@@ -1,8 +1,22 @@
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
 .cube {
-  width: 50px;
-  height: 50px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  width: 100px;
+  height: 100px;
   border: 1px solid white;
   background-color: black;
+  position: absolute;
 }
 .cube-left {
   transform: rotateX(0deg);
