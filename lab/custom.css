@@ -54,7 +54,7 @@
 
 
 .scene-glitch {
-  animation: glitch 1s linear infinite;
+  animation: glitch 4s linear infinite;
 }
 
 @keyframes glitch{
