@@ -69,13 +69,7 @@
   }
 }
 
-.scene-glitch:before,
-.scene-glitch:after{
-  position: absolute;
-  left: 0;
-}
-
-.scene-glitch:before{
+.glitch1{
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -93,7 +87,7 @@
   }
 }
 
-.scene-glitch:after{
+.glitch2{
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
