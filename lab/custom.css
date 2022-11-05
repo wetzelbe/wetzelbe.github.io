@@ -1,0 +1,12 @@
+.cube {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: black;
+}
+.cube-left {}
+.cube-right {}
+.cube-top {}
+.cube-bottom {}
+.cube-front {}
+.cube-behind {}
