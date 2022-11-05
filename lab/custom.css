@@ -4,9 +4,33 @@
   border: 1px solid white;
   background-color: black;
 }
-.cube-left {}
-.cube-right {}
-.cube-top {}
-.cube-bottom {}
-.cube-front {}
-.cube-behind {}
+.cube-left {
+  transform: rotateX(0deg);
+  transform: rotateY(45deg);
+  transform: rotateZ(45deg);
+}
+.cube-right {
+  transform: rotateX(0deg);
+  transform: rotateY(45deg);
+  transform: rotateZ(45deg);
+}
+.cube-top {
+  transform: rotateX(45deg);
+  transform: rotateY(0deg);
+  transform: rotateZ(45deg);
+}
+.cube-bottom {
+  transform: rotateX(45deg);
+  transform: rotateY(0deg);
+  transform: rotateZ(45deg);
+}
+.cube-front {
+  transform: rotateX(0deg);
+  transform: rotateY(0deg);
+  transform: rotateZ(0deg);
+}
+.cube-behind {
+  transform: rotateX(0deg);
+  transform: rotateY(0deg);
+  transform: rotateZ(0deg);
+}
