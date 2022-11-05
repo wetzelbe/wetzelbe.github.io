@@ -12,8 +12,8 @@
 }
 
 .cube-face {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border: 1px solid white;
   background-color: rgba(0,0,0,0);
   position: absolute;
