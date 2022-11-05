@@ -17,6 +17,7 @@
   border: 1px solid white;
   background-color: black;
   position: absolute;
+  opacity: 0;
 }
 .cube-left {
   transform: rotateX(0deg);
