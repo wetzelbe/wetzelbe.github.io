@@ -21,6 +21,7 @@
   animation-name: rotateAroundYAxis;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .cube-face {
