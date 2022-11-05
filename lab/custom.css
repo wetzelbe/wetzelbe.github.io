@@ -95,8 +95,6 @@
 
 #glitch2{
   animation: glitchBotom 1.5s linear infinite, rotateAroundYAxis 10s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
 @keyframes glitchBotom{
