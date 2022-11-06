@@ -81,11 +81,9 @@
 @keyframes glitchTop{
   2%,64%{
     translate 2px -2px;
-    border: 1px solid green;
   }
   4%,60%{
     translate: -2px 2px;
-    border: 1px solid white;
   }
   62%{
     translate: 13px -1px;
@@ -100,11 +98,9 @@
 @keyframes glitchBotom{
   2%,64%{
     translate: -2px 0;
-    border: 1px solid pink;
   }
   4%,60%{
     translate: -2px 0;
-    border: 1px solid white;
   }
   62%{
     translate: -22px 5px;
