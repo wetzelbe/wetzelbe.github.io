@@ -76,13 +76,12 @@
 
 #glitch1{
   animation: glitchTop 1s linear infinite, rotateAroundYAxis 10s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
 @keyframes glitchTop{
   2%,64%{
     translate 2px -2px;
+    border: 1px solid green;
   }
   4%,60%{
     translate: -2px 2px;
@@ -100,6 +99,7 @@
 @keyframes glitchBotom{
   2%,64%{
     translate: -2px 0;
+    border: 1px solid pink;
   }
   4%,60%{
     translate: -2px 0;
