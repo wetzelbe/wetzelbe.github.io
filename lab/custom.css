@@ -85,6 +85,7 @@
   }
   4%,60%{
     translate: -2px 2px;
+    border: 1px solid white;
   }
   62%{
     translate: 13px -1px;
@@ -103,6 +104,7 @@
   }
   4%,60%{
     translate: -2px 0;
+    border: 1px solid white;
   }
   62%{
     translate: -22px 5px;
