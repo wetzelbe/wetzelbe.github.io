@@ -32,6 +32,7 @@ const drawCat = (ctx, height, version) => {
   // Tail
   ctx.fillRect(startX, startY + 12, 2, 4)
   ctx.fillRect(startX-2, startY + 14, 2, 6)
+  ctx.fillRect(startX - 6, startY + 18, 4, 2);
   
   if (version == 1)
   {
@@ -41,6 +42,7 @@ const drawCat = (ctx, height, version) => {
     ctx.fillRect(startX + 2, startY + 22, 2, 2);
     
     // Tail
+    ctx.fillRect(startX - 8, startY + 16, 2, 2);
   }
   else 
   {
@@ -48,6 +50,9 @@ const drawCat = (ctx, height, version) => {
     ctx.fillRect(startX + 14, startY + 22, 2, 2);
     ctx.fillRect(startX + 18, startY + 22, 2, 2);
     ctx.fillRect(startX, startY + 22, 2, 2);
+    
+    // Tail
+    ctx.fillRect(startX - 2, startY + 20, 2, 2);
   }
   
 }
