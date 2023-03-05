@@ -93,7 +93,7 @@ const start = () => {
   document.addEventListener('keydown', (event) => {
     if (event.code == "Space")
     {
-      alert(`Keydown: The key pressed is ${keyName} and its code value is ${keyCode}`);
+      alert(`Keydown: The key code value is ${event.code}`);
     }
   }, false);
   
