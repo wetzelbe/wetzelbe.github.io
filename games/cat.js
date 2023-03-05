@@ -74,7 +74,7 @@ const drawFrame = () => {
 
 const drawObstacles = (ctx) => {
   obstacles.forEach(obstacle => {
-    ctx.fillRect(obstacle.x, obstacle.y - obstacle.height, obstacle.width, obstacle.height)
+    ctx.fillRect(obstacle.x, 300 - obstacle.height, obstacle.width, obstacle.height)
   })
 }
 
