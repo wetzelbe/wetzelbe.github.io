@@ -109,21 +109,16 @@ const doPhysics = () => {
     }
   }
   
+  if (obstacles[0].x + obstacles[0].width > 0)
+  {
+    obstacle.shift()
+  }
+  
   // Obstacles
   obstacles.forEach(obstacle => {
     obstacle.x = obstacle.x - 5
   })
   
-}
-
-
-const tick = () => {
-  if (running)
-  {
-    doPhysics()
-    drawFrame()
-    setTimeout(tick, 50)
-  }
 }
 
 const addObstacle = (height, width) => {
@@ -133,6 +128,24 @@ const addObstacle = (height, width) => {
     width: width
   })
 }
+
+const tick = () => {
+  if (running)
+  {
+    doPhysics()
+    drawFrame()
+    
+    let i = Math.random()
+    
+    if (i > 0.99)
+    {
+      addObstacle(Math.round(Math.random() * 100), Math.round(Math.random() * 30))
+    }
+    
+    setTimeout(tick, 50)
+  }
+}
+
 
 const start = () => {
   running = true
