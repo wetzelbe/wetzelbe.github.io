@@ -6,6 +6,7 @@ var frame = 0
 var runnning = false
 var canvasId = "catgamecanvas"
 var jumpQueued = false
+var delta = 10
 
 const drawCat = (ctx, height, version) => {
   let startX = 30
@@ -75,11 +76,13 @@ const doPhysics = () => {
   if (catY == 0 && jumpQueued)
   {
     catDirection = 1
-    catY = catY + 10
+    delta = 10
+    catY = catY + delta
   }
   else if (catDirection == 1)
   {
-    catY = catY + (150*150 - catY*catY)/ 100
+    delta = delta - 1
+    catY = catY + delta
     if (catY > 150)
     {
       catDirection = -1
@@ -87,7 +90,8 @@ const doPhysics = () => {
   }
   else if (catDirection == -1)
   {
-    catY = catY - (150*150 - catY*catY)/ 100
+    delta = delta + 1
+    catY = catY - delta
     if (catY <= 0)
     {
       catY = 0
