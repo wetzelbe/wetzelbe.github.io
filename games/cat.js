@@ -24,7 +24,7 @@ const drawCat = (canvas, height, version) => {
   // Legs
   ctx.fillRect(startX + 2, startY + 20, 6, 2);
   ctx.fillRect(startX + 12, startY + 20, 2, 2);
-  ctx.fillRect(startX + 14, startY + 20, 2, 2);
+  ctx.fillRect(startX + 16, startY + 20, 2, 2);
   
   // Body
   ctx.fillRect(startX + 2, startY + 12, 16, 8);
