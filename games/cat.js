@@ -5,6 +5,7 @@ var obstacles = []
 var frame = 0
 var runnning = false
 var canvasId = "catgamecanvas"
+var jumpQueued = false
 
 const drawCat = (ctx, height, version) => {
   let startX = 30
@@ -89,6 +90,11 @@ const tick = () => {
 const start = () => {
   running = true
   tick()
+  document.addEventListener('keydown', (event) => {
+    var keyName = event.key;
+    var keyCode = event.code;
+    alert(`Keydown: The key pressed is ${keyName} and its code value is ${keyCode}`);
+  }, false);
   
 }
 
