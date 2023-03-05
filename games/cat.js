@@ -12,11 +12,21 @@ const drawCat = (canvas, height, version) => {
   let startY = 300 - catY - 24
   
   ctx.fillStyle = "white"
+  // Ears
   ctx.fillRect(startX + 8, startY, 2, 2);
   ctx.fillRect(startX + 18, startY, 2, 2);
+  
+  // Head
   ctx.fillRect(startX + 8, startY + 2, 4, 8);
   ctx.fillRect(startX + 16, startY + 2, 4, 8);
   ctx.fillRect(startX + 12, startY + 4, 4, 6);
+  
+  // Legs
+  ctx.fillRect(startX + 2, startY + 20, 6, 2);
+  ctx.fillRect(startX + 12, startY + 20, 2, 2);
+  ctx.fillRect(startX + 14, startY + 20, 2, 2);
+  
+  // Body
   ctx.fillRect(startX + 2, startY + 12, 16, 8);
 
 }
