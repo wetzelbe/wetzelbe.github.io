@@ -68,11 +68,19 @@ const drawFrame = () => {
   version = Math.round(frame / 4)
   version = version % 2
   drawCat(ctx, catY, version)
+  drawObstacles(ctx)
   
+}
+
+const drawObstacles = (ctx) => {
+  obstacles.forEach(obstacle => {
+    ctx.fillRect(obstacle.x, obstacle.y - obstacle.height, obstacle.width, obstacle.height)
+  })
 }
 
 
 const doPhysics = () => {
+  // Cat Jumps
   if (catY == 0 && jumpQueued)
   {
     catDirection = 1
@@ -100,6 +108,12 @@ const doPhysics = () => {
       jumpQueued = false
     }
   }
+  
+  // Obstacles
+  obstacles.forEach(obstacle => {
+    obstacle.x = obstacle.x - 5
+  })
+  
 }
 
 
@@ -112,6 +126,14 @@ const tick = () => {
   }
 }
 
+const addObstacle = (height, width) => {
+  obstacles.push({
+    x: 400,
+    height: height,
+    width: width
+  })
+}
+
 const start = () => {
   running = true
   tick()
@@ -121,7 +143,7 @@ const start = () => {
       jumpQueued = true
     }
   }, false);
-  
+  addObstacle(40, 10)
 }
 
 start()
