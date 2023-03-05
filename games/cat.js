@@ -76,7 +76,7 @@ const doPhysics = () => {
   if (catY == 0 && jumpQueued)
   {
     catDirection = 1
-    delta = 10
+    delta = 22
     catY = catY + delta
   }
   else if (catDirection == 1)
