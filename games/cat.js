@@ -6,18 +6,20 @@ var frame = 0
 var runnning = false
 var canvasId = ""
 
-function drawCat(canvas, height)
-{
-  var ctx = canvas.getContext("2d");
-  ctx.moveTo(0, 0);
-  ctx.lineTo(200, 100);
+const drawCat = (canvas, height) => {
+  let ctx = canvas.getContext("2d");
+  let startX = 30
+  let startY = 300 - catY - 24
+  
+  ctx.fillStyle = "white"
+  ctx.fillRect(startX, startY, 2, 2);
+  ctx.fillRect(startX + 2, startY + 12, 16, 8);
   ctx.stroke();
 
 }
 
 
-function drawFrame()
-{
+const drawFrame = () => {
   canvas = document.getElementbyId(canvasId)
   drawCat(canvas, catY)
   
@@ -44,3 +46,5 @@ const start = () => {
   tick()
   
 }
+
+start()
