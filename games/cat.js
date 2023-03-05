@@ -74,9 +74,7 @@ const drawFrame = () => {
 const doPhysics = () => {
   if (catY == 0 && jumpQueued)
   {
-    jumpQueued = false
     catDirection = 1
-    
   }
   else if (catDirection == 1)
   {
@@ -93,6 +91,7 @@ const doPhysics = () => {
     {
       catY = 0
       catDirection = 0
+      jumpQueued = false
     }
   }
 }
