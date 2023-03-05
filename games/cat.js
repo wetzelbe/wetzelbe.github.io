@@ -68,13 +68,33 @@ const drawFrame = () => {
   version = version % 2
   drawCat(ctx, catY, version)
   
-  
-
-  
 }
 
 
 const doPhysics = () => {
+  if (catY == 0 && jumpQueued)
+  {
+    jumpQueued = false
+    catDirection = 1
+    
+  }
+  else if (catDirection == 1)
+  {
+    catY = catY + 10
+    if (catY > 150)
+    {
+      catDirection = -1
+    }
+  }
+  else if (catDirection == -1)
+  {
+    catY = catY - 10
+    if (catY < 0)
+    {
+      catY = 0
+      catDirection = 0
+    }
+  }
 }
 
 
@@ -91,9 +111,9 @@ const start = () => {
   running = true
   tick()
   document.addEventListener('keydown', (event) => {
-    if (event.code == "Space")
+    if (event.code == "Space" && !jumpQueued)
     {
-      alert(`Keydown: The key code value is ${event.code}`);
+      jumpQueued = true
     }
   }, false);
   
