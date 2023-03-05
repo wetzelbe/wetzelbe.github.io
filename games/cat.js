@@ -35,7 +35,7 @@ const drawCat = (ctx, height, version) => {
   ctx.fillRect(startX-2, startY + 14, 2, 6)
   ctx.fillRect(startX - 6, startY + 20, 4, 2);
   
-  if (version == 1)
+  if (version == 1 || catY == 0)
   {
     // Legs
     ctx.fillRect(startX + 12, startY + 22, 2, 2);
