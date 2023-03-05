@@ -20,7 +20,7 @@ const drawCat = (canvas, height) => {
 
 
 const drawFrame = () => {
-  canvas = document.getElementbyId(canvasId)
+  canvas = document.getElementById(canvasId)
   drawCat(canvas, catY)
   
 
