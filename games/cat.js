@@ -59,6 +59,11 @@ const drawCat = (ctx, height, version) => {
   
 }
 
+const drawObstacles = (ctx) => {
+  obstacles.forEach(obstacle => {
+    ctx.fillRect(obstacle.x, 300 - obstacle.height, obstacle.width, obstacle.height)
+  })
+}
 
 const drawFrame = () => {
   frame = frame + 1
@@ -71,13 +76,6 @@ const drawFrame = () => {
   drawObstacles(ctx)
   
 }
-
-const drawObstacles = (ctx) => {
-  obstacles.forEach(obstacle => {
-    ctx.fillRect(obstacle.x, 300 - obstacle.height, obstacle.width, obstacle.height)
-  })
-}
-
 
 const doPhysics = () => {
   // Cat Jumps
