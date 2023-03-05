@@ -28,7 +28,11 @@ const drawCat = (canvas, height, version) => {
   
   // Body
   ctx.fillRect(startX + 2, startY + 12, 16, 8);
-
+  
+  // Tail
+  ctx.fillRect(startX, startY + 12, 2, 4)
+  ctx.fillRect(startX-2, startY + 14, 2, 6)
+  
 }
 
 
