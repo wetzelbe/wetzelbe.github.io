@@ -6,8 +6,7 @@ var frame = 0
 var runnning = false
 var canvasId = "catgamecanvas"
 
-const drawCat = (canvas, height, version) => {
-  let ctx = canvas.getContext("2d");
+const drawCat = (ctx, height, version) => {
   let startX = 30
   let startY = 300 - catY - 24
   
@@ -33,12 +32,33 @@ const drawCat = (canvas, height, version) => {
   ctx.fillRect(startX, startY + 12, 2, 4)
   ctx.fillRect(startX-2, startY + 14, 2, 6)
   
+  if (version == 1)
+  {
+    // Legs
+    ctx.fillRect(startX + 12, startY + 22, 2, 2);
+    ctx.fillRect(startX + 16, startY + 22, 2, 2);
+    
+    // Tail
+  }
+  else 
+  {
+    // Legs
+    ctx.fillRect(startX + 14, startY + 22, 2, 2);
+    ctx.fillRect(startX + 18, startY + 22, 2, 2);
+  }
+  
 }
 
 
 const drawFrame = () => {
+  frame = frame + 1
   canvas = document.getElementById(canvasId)
-  drawCat(canvas, catY)
+  let ctx = canvas.getContext("2d");
+  ctx.clearRect(0,0, canvas.width, canvas.height)
+  version = Math.round(frame / 4)
+  version = version % 2
+  drawCat(ctx, catY, version)
+  
   
 
   
