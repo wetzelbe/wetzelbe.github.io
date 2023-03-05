@@ -91,7 +91,7 @@ const start = () => {
   running = true
   tick()
   document.addEventListener('keydown', (event) => {
-    if (event.code = "Space")
+    if (event.code == "Space")
     {
       alert(`Keydown: The key pressed is ${keyName} and its code value is ${keyCode}`);
     }
