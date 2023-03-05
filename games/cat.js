@@ -24,6 +24,7 @@ const drawCat = (ctx, height, version) => {
   ctx.fillRect(startX + 2, startY + 20, 6, 2);
   ctx.fillRect(startX + 12, startY + 20, 2, 2);
   ctx.fillRect(startX + 16, startY + 20, 2, 2);
+  ctx.fillRect(startX + 4, startY + 20, 2, 2);
   
   // Body
   ctx.fillRect(startX + 2, startY + 12, 16, 8);
@@ -37,6 +38,7 @@ const drawCat = (ctx, height, version) => {
     // Legs
     ctx.fillRect(startX + 12, startY + 22, 2, 2);
     ctx.fillRect(startX + 16, startY + 22, 2, 2);
+    ctx.fillRect(startX + 2, startY + 22, 2, 2);
     
     // Tail
   }
@@ -45,6 +47,7 @@ const drawCat = (ctx, height, version) => {
     // Legs
     ctx.fillRect(startX + 14, startY + 22, 2, 2);
     ctx.fillRect(startX + 18, startY + 22, 2, 2);
+    ctx.fillRect(startX, startY + 22, 2, 2);
   }
   
 }
