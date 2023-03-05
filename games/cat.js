@@ -14,7 +14,6 @@ const drawCat = (canvas, height) => {
   ctx.fillStyle = "white"
   ctx.fillRect(startX, startY, 2, 2);
   ctx.fillRect(startX + 2, startY + 12, 16, 8);
-  ctx.stroke();
 
 }
 
