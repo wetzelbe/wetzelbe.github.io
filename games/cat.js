@@ -121,7 +121,7 @@ const doPhysics = () => {
 
 const addObstacle = (height, width) => {
   obstacles.push({
-    x: 400,
+    x: 600,
     height: height,
     width: width
   })
