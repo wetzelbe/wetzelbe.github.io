@@ -79,7 +79,7 @@ const doPhysics = () => {
   }
   else if (catDirection == 1)
   {
-    catY = catY + 10
+    catY = catY + (150 - catY)/ 10
     if (catY > 150)
     {
       catDirection = -1
@@ -87,7 +87,7 @@ const doPhysics = () => {
   }
   else if (catDirection == -1)
   {
-    catY = catY - 10
+    catY = catY - (150 - catY)/ 10
     if (catY <= 0)
     {
       catY = 0
