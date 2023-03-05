@@ -86,6 +86,7 @@ const doPhysics = () => {
     if (catY > 150)
     {
       catDirection = -1
+      delta = 0
     }
   }
   else if (catDirection == -1)
