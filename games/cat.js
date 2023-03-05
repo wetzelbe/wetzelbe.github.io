@@ -109,7 +109,7 @@ const doPhysics = () => {
     }
   }
   
-  if (obstacles[0].x + obstacles[0].width > 0)
+  if (obstacles.length > 0 && obstacles[0].x + obstacles[0].width > 0)
   {
     obstacle.shift()
   }
