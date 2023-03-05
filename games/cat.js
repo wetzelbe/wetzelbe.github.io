@@ -4,7 +4,7 @@ var catDirection = 0
 var obstacles = []
 var frame = 0
 var runnning = false
-var canvasId = ""
+var canvasId = "catgamecanvas"
 
 const drawCat = (canvas, height) => {
   let ctx = canvas.getContext("2d");
