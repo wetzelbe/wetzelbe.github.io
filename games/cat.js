@@ -87,10 +87,16 @@ const drawFrame = () => {
 const detectCollisions = () => {
   collision = false
   obstacles.forEach(obstacle => {
-    // Detect Collisions
+    // Detect Collisions in current Frame
     if (obstacle.x <= catX && obstacle.x + obstacle.width >= catX && catY < obstacle.height) {
       collision = true
     }
+    // Detect Collisions in between Frames
+    if (obstacle.x <= catX && obstacle.x + obstacle.width + (5 + Math.round(frame/150)) >= catX && catY < obstacle.height )
+    {
+      collision = true
+    }
+    
   })
   return collision
 }
