@@ -181,7 +181,7 @@ const start = () => {
     }
   }, false);
   document.getElementById(canvasId).addEventListener("touchstart", () => {
-    if (event.code == "Space" && !jumpQueued)
+    if (!jumpQueued)
     {
       jumpQueued = true
     }
