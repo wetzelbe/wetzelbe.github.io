@@ -88,12 +88,9 @@ const detectCollisions = () => {
   collision = false
   obstacles.forEach(obstacle => {
     // Detect Collisions in current Frame
-    if (obstacle.x <= catX && obstacle.x + obstacle.width >= catX && catY < obstacle.height) {
-      collision = true
-    }
-    // Detect Collisions in between Frames
-    if (obstacle.x <= catX && obstacle.x + obstacle.width + (5 + Math.round(frame/150)) >= catX && catY < obstacle.height )
-    {
+    if ((obstacle.x <= catX && obstacle.x + obstacle.width >= catX && catY < obstacle.height)
+       || (obstacle.x <= catX && obstacle.x + obstacle.width + (5 + Math.round(frame/150)) >= catX && catY < obstacle.height ) // Detect Collisions between frames
+       || (obstacle.x <= catX + 20 && obstacle.x + obstacle.width >= catX + 20 && catY < obstacle.height)) {
       collision = true
     }
     
