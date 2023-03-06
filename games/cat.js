@@ -166,9 +166,9 @@ const tick = () => {
       drawFrame()
       let i = Math.random()
     
-      if (i > 0.99)
+      if (i > 0.97)
       {
-        addObstacle(Math.round(Math.random() * 100), Math.round(Math.random() * 30))
+        addObstacle(Math.round(Math.random() * 100) + 2, Math.round(Math.random() * 30) + 2)
       }
     
       setTimeout(tick, 50)
