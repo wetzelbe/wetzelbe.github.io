@@ -105,7 +105,7 @@ const doPhysics = () => {
   }
   else if (catDirection == 1)
   {
-    delta = delta - 2
+    delta = delta - 4
     catY = catY + delta
     if (catY > 143)
     {
@@ -115,7 +115,7 @@ const doPhysics = () => {
   }
   else if (catDirection == -1)
   {
-    delta = delta + 2
+    delta = delta + 4
     catY = catY - delta
     if (catY <= 0)
     {
