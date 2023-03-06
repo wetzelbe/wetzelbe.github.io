@@ -77,6 +77,17 @@ const drawFrame = () => {
   
 }
 
+const detectCollisions = () => {
+  collision = false
+  obstacles.forEach(obstacle => {
+    // Detect Collisions
+    if (obstacle.x <= 0 && obstacle.x + obstacle.width >= 0 && catY < obstacle.height) {
+      collision = true
+    }
+  })
+  return collision
+}
+
 const doPhysics = () => {
   // Cat Jumps
   if (catY == 0 && jumpQueued)
@@ -131,16 +142,24 @@ const tick = () => {
   if (running)
   {
     doPhysics()
-    drawFrame()
     
-    let i = Math.random()
-    
-    if (i > 0.99)
+    if (detectCollisions())
     {
-      addObstacle(Math.round(Math.random() * 100), Math.round(Math.random() * 30))
+      running = false
+      drawFrame()
     }
+    else
+    {
+      drawFrame()
+      let i = Math.random()
     
-    setTimeout(tick, 50)
+      if (i > 0.99)
+      {
+        addObstacle(Math.round(Math.random() * 100), Math.round(Math.random() * 30))
+      }
+    
+      setTimeout(tick, 50)
+    }
   }
 }
 
