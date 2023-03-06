@@ -180,6 +180,12 @@ const start = () => {
       jumpQueued = true
     }
   }, false);
+  document.getElementById(canvasId).addEventListener("touchstart", () => {
+    if (event.code == "Space" && !jumpQueued)
+    {
+      jumpQueued = true
+    }
+  });
   addObstacle(40, 10)
 }
 
