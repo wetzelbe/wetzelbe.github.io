@@ -1,5 +1,6 @@
 // Global vars
 var catY = 0
+const catX = 30
 var catDirection = 0
 var obstacles = []
 var frame = 0
@@ -9,7 +10,7 @@ var jumpQueued = false
 var delta = 10
 
 const drawCat = (ctx, height, version) => {
-  let startX = 30
+  let startX = catX
   let startY = 300 - catY - 24
   
   ctx.fillStyle = "white"
@@ -81,7 +82,7 @@ const detectCollisions = () => {
   collision = false
   obstacles.forEach(obstacle => {
     // Detect Collisions
-    if (obstacle.x <= 0 && obstacle.x + obstacle.width >= 0 && catY < obstacle.height) {
+    if (obstacle.x <= catX && obstacle.x + obstacle.width >= catX && catY < obstacle.height) {
       collision = true
     }
   })
