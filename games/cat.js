@@ -66,6 +66,11 @@ const drawObstacles = (ctx) => {
   })
 }
 
+const drawScore = (ctx, x, y) => {
+  ctx.font = "30px Courier"
+  ctx.fillText(frame, x,y)
+}
+
 const drawFrame = () => {
   frame = frame + 1
   canvas = document.getElementById(canvasId)
@@ -75,6 +80,7 @@ const drawFrame = () => {
   version = version % 2
   drawCat(ctx, catY, version)
   drawObstacles(ctx)
+  drawScore(ctx, canvas.width/2, 20)
   
 }
 
