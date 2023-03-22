@@ -80,7 +80,7 @@
 
 @keyframes glitchTop{
   2%,64%{
-    translate 2px -2px;
+    translate: 2px -2px;
   }
   4%,60%{
     translate: -2px 2px;
