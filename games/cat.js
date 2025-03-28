@@ -108,6 +108,7 @@ const doPhysics = () => {
     catDirection = 1
     delta = 36
     catY = catY + delta
+    jumpQueued = false
   }
   else if (catDirection == 1)
   {
@@ -127,7 +128,6 @@ const doPhysics = () => {
     {
       catY = 0
       catDirection = 0
-      jumpQueued = false
     }
   }
   }
