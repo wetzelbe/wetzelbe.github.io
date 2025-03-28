@@ -167,7 +167,7 @@ const tick = () => {
     else
     {
       drawFrame()
-      let i = Math.random() * 3600 + 200
+      let i = Math.random() * 3 * frame + frame
     
       if (distanceToLastObstacle > i)
       {
