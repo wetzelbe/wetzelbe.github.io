@@ -139,10 +139,10 @@ const doPhysics = () => {
   
   // Obstacles
   obstacles.forEach(obstacle => {
-    obstacle.x = obstacle.x - (2.5 + Math.round(frame/75))
+    obstacle.x = obstacle.x - (2.5 + Math.round(frame/300))
   })
 
-  distanceToLastObstacle += (2.5 + Math.round(frame/75))
+  distanceToLastObstacle += (2.5 + Math.round(frame/300))
   
 }
 
