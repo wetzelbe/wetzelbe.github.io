@@ -9,6 +9,7 @@ var canvasId = "catgamecanvas"
 var jumpQueued = false
 var delta = 10
 var distanceToLastObstacle = 0
+var distanceBetweenObstacles = 0
 
 const drawCat = (ctx, height, version) => {
   let startX = catX
@@ -171,12 +172,12 @@ const tick = () => {
       if (frame > minDistance){
         minDistance = frame
       }
-      let i = Math.random() * 600 + frame / 300 + minDistance 
     
-      if (distanceToLastObstacle > i)
+      if (distanceToLastObstacle > distanceBetweenObstacles)
       {
         addObstacle(Math.round(Math.random() * 100) + 2, Math.round(Math.random() * 30) + 2)
         distanceToLastObstacle = 0
+        distanceBetweenObstacles = Math.random() * 600 + frame / 300 + minDistance 
       }
     
       setTimeout(tick, 25)
@@ -200,7 +201,6 @@ const start = () => {
       jumpQueued = true
     }
   });
-  addObstacle(40, 10)
 }
 
 start()
