@@ -110,7 +110,7 @@ const doPhysics = () => {
   }
   else if (catDirection == 1)
   {
-    delta = delta - 4
+    delta = delta - 2
     catY = catY + delta
     if (catY > 179)
     {
@@ -120,7 +120,7 @@ const doPhysics = () => {
   }
   else if (catDirection == -1)
   {
-    delta = delta + 4
+    delta = delta + 2
     catY = catY - delta
     if (catY <= 0)
     {
@@ -137,10 +137,10 @@ const doPhysics = () => {
   
   // Obstacles
   obstacles.forEach(obstacle => {
-    obstacle.x = obstacle.x - (5 + Math.round(frame/150))
+    obstacle.x = obstacle.x - (2.5 + Math.round(frame/75))
   })
 
-  distanceToLastObstacle += (5 + Math.round(frame/150))
+  distanceToLastObstacle += (2.5 + Math.round(frame/75))
   
 }
 
@@ -173,7 +173,7 @@ const tick = () => {
         distanceToLastObstacle = 0
       }
     
-      setTimeout(tick, 50)
+      setTimeout(tick, 25)
     }
   }
 }
