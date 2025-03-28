@@ -177,7 +177,7 @@ const tick = () => {
       {
         addObstacle(Math.round(Math.random() * 100) + 2, Math.round(Math.random() * 30) + 2)
         distanceToLastObstacle = 0
-        distanceBetweenObstacles = Math.random() * 600 + frame / 300 + minDistance 
+        distanceBetweenObstacles = Math.random() * 300 + minDistance 
       }
     
       setTimeout(tick, 25)
