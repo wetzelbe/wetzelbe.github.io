@@ -102,15 +102,16 @@ const detectCollisions = () => {
 
 const doPhysics = () => {
   // Cat Jumps
+  if (frame % 2 == 0){
   if (catY == 0 && jumpQueued)
   {
     catDirection = 1
-    delta = 18
+    delta = 36
     catY = catY + delta
   }
   else if (catDirection == 1)
   {
-    delta = delta - 2
+    delta = delta - 4
     catY = catY + delta
     if (catY > 179)
     {
@@ -120,7 +121,7 @@ const doPhysics = () => {
   }
   else if (catDirection == -1)
   {
-    delta = delta + 2
+    delta = delta + 4
     catY = catY - delta
     if (catY <= 0)
     {
@@ -128,6 +129,7 @@ const doPhysics = () => {
       catDirection = 0
       jumpQueued = false
     }
+  }
   }
   
   if (obstacles.length > 0 && obstacles[0].x + obstacles[0].width < 0)
