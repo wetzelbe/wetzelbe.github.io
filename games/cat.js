@@ -171,7 +171,7 @@ const tick = () => {
       if (frame > minDistance){
         minDistance = frame
       }
-      let i = Math.random() * 3 * frame + minDistance 
+      let i = Math.random() * frame + minDistance 
     
       if (distanceToLastObstacle > i)
       {
