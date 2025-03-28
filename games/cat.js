@@ -169,8 +169,8 @@ const tick = () => {
     {
       drawFrame()
       let minDistance = 200
-      if (frame > minDistance){
-        minDistance = frame
+      if (frame/30 > minDistance){
+        minDistance = frame/30
       }
     
       if (distanceToLastObstacle > distanceBetweenObstacles)
