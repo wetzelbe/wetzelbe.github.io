@@ -8,6 +8,7 @@ var runnning = false
 var canvasId = "catgamecanvas"
 var jumpQueued = false
 var delta = 10
+var distanceToLastObstacle = 0
 
 const drawCat = (ctx, height, version) => {
   let startX = catX
@@ -138,6 +139,8 @@ const doPhysics = () => {
   obstacles.forEach(obstacle => {
     obstacle.x = obstacle.x - (5 + Math.round(frame/150))
   })
+
+  distanceToLastObstacle -= (5 + Math.round(frame/150)
   
 }
 
@@ -162,11 +165,12 @@ const tick = () => {
     else
     {
       drawFrame()
-      let i = Math.random()
+      let i = Math.random() * 1200 + 200
     
-      if (i > 0.99)
+      if (distanceToLastObstacle > i)
       {
         addObstacle(Math.round(Math.random() * 100) + 2, Math.round(Math.random() * 30) + 2)
+        distanceToLastObstacle = 0
       }
     
       setTimeout(tick, 50)
