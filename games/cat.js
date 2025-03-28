@@ -140,7 +140,7 @@ const doPhysics = () => {
     obstacle.x = obstacle.x - (5 + Math.round(frame/150))
   })
 
-  distanceToLastObstacle += (5 + Math.round(frame/150)
+  distanceToLastObstacle += (5 + Math.round(frame/150))
   
 }
 
